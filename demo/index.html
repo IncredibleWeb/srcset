@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Demo - jquery.incredible.srcset</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .container{
+                width: 50%;
+                max-width: 1000px;
+                margin: auto;
+            }
+
+            .container > img{
+                width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="images/sample-240.jpg" data-srcset="images/sample-1000.jpg 1000px, images/sample-500.jpg 500px" alt="sample-image">
+        </div>
+        <script type="text/javascript" src="scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/jquery.incredible.srcset.min.js"></script>
+    </body>
+</html>
