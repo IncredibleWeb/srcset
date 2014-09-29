@@ -1,28 +1,72 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Demo - jquery.incredible.srcset</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            .container{
-                width: 50%;
-                max-width: 1000px;
-                margin: auto;
-            }
 
-            .container > img{
-                width: 100%;
-                height: auto;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <img src="images/sample-240.jpg" data-srcset="images/sample-1000.jpg 1000px, images/sample-500.jpg 500px" alt="sample-image">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Demo - Incredible Web - jquery.incredible.srcset</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <!-- custom styling for the demo -->
+    <style>
+    img {
+        width: 100%;
+    }
+    @media only screen and (min-width: 1025px) {
+        .vw-1920 {
+            background-color: #eee;
+            color: #2a6496;
+        }
+    }
+    @media only screen and (max-width: 1024px) and (min-width: 321px) {
+        .vw-1024 {
+            background-color: #eee;
+            color: #2a6496;
+        }
+    }
+    @media only screen and (max-width: 320px) {
+        .vw-320 {
+            background-color: #eee;
+            color: #2a6496;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-static-top" role="navigation">
+        <div class="navbar-brand">
+            jquery.incredible.srcset
         </div>
-        <script type="text/javascript" src="scripts/jquery.min.js"></script>
-        <script type="text/javascript" src="scripts/jquery.incredible.srcset.min.js"></script>
-    </body>
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li class="vw-1920"><a href="#">1920px</a>
+                </li>
+                <li class="vw-1024"><a href="#">1024px</a>
+                </li>
+                <li class="vw-320"><a href="#">320px</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="main" class="container">
+        <img src="images/sample-240.jpg" data-srcset="images/sample-1000.jpg 1000px" alt="sample-image">
+        <div style="text-align:justify;">
+            <p>
+                <strong>Adjust the size of the viewport by resizing your window and watch the image reload to the best-fitted resolution.</strong>
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+    <footer>
+        <div>
+            Developed by <a href="http://www.incredible-web.com/" title="Incredible Web">Incredible Web</a>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="js/jquery.incredible.srcset.min.js"></script>-->
+    <script type="text/javascript" src="../src/jquery.incredible.srcset.js"></script>
+    <!-- custom JavaScript for the demo -->
+</body>
+
 </html>
