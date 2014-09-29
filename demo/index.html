@@ -12,19 +12,25 @@
     img {
         width: 100%;
     }
-    @media only screen and (min-width: 1025px) {
+    @media only screen and (min-width: 1920px) {
         .vw-1920 {
             background-color: #eee;
             color: #2a6496;
         }
     }
-    @media only screen and (max-width: 1024px) and (min-width: 321px) {
+    @media only screen and (max-width: 1919px) and (min-width: 1024px) {
         .vw-1024 {
             background-color: #eee;
             color: #2a6496;
         }
     }
-    @media only screen and (max-width: 320px) {
+    @media only screen and (max-width: 1023px) and (min-width: 640px) {
+        .vw-640 {
+            background-color: #eee;
+            color: #2a6496;
+        }
+    }
+    @media only screen and (max-width: 639px) {
         .vw-320 {
             background-color: #eee;
             color: #2a6496;
@@ -35,8 +41,10 @@
 
 <body>
     <nav class="navbar navbar-static-top" role="navigation">
-        <div class="navbar-brand">
-            jquery.incredible.srcset
+        <div class="navbar-header">
+            <div class="navbar-brand">
+                jquery.incredible.srcset
+            </div>
         </div>
         <div class="container">
             <ul class="nav navbar-nav">
@@ -44,16 +52,18 @@
                 </li>
                 <li class="vw-1024"><a href="#">1024px</a>
                 </li>
+                <li class="vw-640"><a href="#">640px</a>
+                </li>
                 <li class="vw-320"><a href="#">320px</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <div id="main" class="container">
-        <img src="images/sample-240.jpg" data-srcset="images/sample-1000.jpg 1000px" alt="sample-image">
+    <div >
+        <img src="images/sample-image-320.jpg" data-srcset="images/sample-image-640.jpg 640px, images/sample-image-1024.jpg 1024px, images/sample-image-1920.jpg 1920px" alt="sample-image">
         <div style="text-align:justify;">
             <p>
-                <strong>Adjust the size of the viewport by resizing your window and watch the image reload to the best-fitted resolution.</strong>
+                Adjust the size of the viewport by resizing your window and watch the image reload to the best-fitted resolution. The above current setting is conservative, i.e. it will update the image only when the viewport is larger than the resolution. This could be adjusted by changing the values for the <b>data-srcset</b> attribute
             </p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
@@ -64,9 +74,7 @@
         </div>
     </footer>
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <!--<script type="text/javascript" src="js/jquery.incredible.srcset.min.js"></script>-->
-    <script type="text/javascript" src="../src/jquery.incredible.srcset.js"></script>
-    <!-- custom JavaScript for the demo -->
+    <script type="text/javascript" src="js/jquery.incredible.srcset.min.js"></script>    
 </body>
 
 </html>
