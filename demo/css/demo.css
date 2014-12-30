@@ -1,0 +1,33 @@
+img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.responsive-markers span{
+    display: block;
+    position: relative;
+    padding: 10px 15px;
+}
+@media only screen and (min-width: 1920px) {
+    .vw-1920 {
+        background-color: #eee;
+        color: #2a6496;
+    }
+}
+@media only screen and (max-width: 1919px) and (min-width: 1024px) {
+    .vw-1024 {
+        background-color: #eee;
+        color: #2a6496;
+    }
+}
+@media only screen and (max-width: 1023px) and (min-width: 640px) {
+    .vw-640 {
+        background-color: #eee;
+        color: #2a6496;
+    }
+}
+@media only screen and (max-width: 639px) {
+    .vw-320 {
+        background-color: #eee;
+        color: #2a6496;
+    }
+}

@@ -12,16 +12,16 @@
             var x = srcset[i].trim().split(' ');
             var url = x[0];
 
-            // if there is no viewport width, then it is the default srcs
+            // if there is no viewport width, then it is the default src
             var mq;
             if (x.length > 1) {
                 mq = x[1];
             }
 
             // if there was a media query
-            if (mq !== undefined && mq) {
+            if (mq !== undefined && mq) {                
                 // create the media query list
-                var mql = window.matchMedia("only screen and (min-width: " + mq + ")");
+                var mql = window.matchMedia("only screen and (min-width: " + mq.replace('w','px') + ")");
 
                 // check if it currently matches the media query
                 if (mql.matches) {
