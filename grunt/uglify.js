@@ -1,10 +1,11 @@
 ﻿module.exports = {
     options: {
-        banner: global.fileHeading
+        sourceMap: true,
+        sourceMapIncludeSources: true,
     },
-    default: {
+    js: {
         files: {
-            'dist/jquery.incredible.srcset.min.js': ['src/jquery.incredible.srcset.js']
+            '<%= paths.build %>/jquery.incredible.srcset.min.js': ['<%= paths.src %>/jquery.incredible.srcset.js']
         }
     }
 };

@@ -1,11 +1,14 @@
-module.exports = function (grunt) {
-    // setup global variables
-    global.fileHeading = '/*! <%= pkg.name %> v<%= pkg.version %> <%= grunt.template.today("dd-mm-yyyy hh:MM:ss") %> - <%= pkg.author %> */\n';
+module.exports = function(grunt) {
 
     require('load-grunt-config')(grunt, {
-        init: true,
         data: {
-            pkg: grunt.file.readJSON('package.json')
+            init: true,
+            paths: {
+                src: 'src',
+                build: 'dist',
+                demo: 'demo',
+            }
         }
     });
+
 };
